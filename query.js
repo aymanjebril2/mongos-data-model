@@ -2,11 +2,12 @@ const db = require("./db");
 const Publisher = require("./models/publisher");
 const Book = require("./models/book");
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
+
 /// find book
 /// create book
 /// update books
 /// deltete book
-//
+
 const createPublisher = async () => {
   const ayman = await Publisher.insertMany({
     name: "ayman",
@@ -36,7 +37,7 @@ const updaingBook = async () => {
 };
 const deletingBook = async () => {
   const deleteOneBook = await Book.deleteMany({
-    title: "The Alchemist",
+    title: "nyc",
   });
   console.log("book deleted it ", deleteOneBook);
 };
